@@ -32,8 +32,6 @@ permissions:
 
 jobs:
   build:
-    env:
-      HELLO_WORLD: ${{vars.HELLO_WORLD}}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -43,7 +41,10 @@ jobs:
         with:
           node-version: ${{ env.NODE_VERSION }}
           cache: 'npm'
-
+      - name: create env file
+        run: |
+          touch .env
+          echo HELLO_WORLD=${{ vars.HELLO_WORLD }} >> .env
       - name: npm install, build, and test
         run: |
           npm install
