@@ -47,6 +47,7 @@ jobs:
         run: |
           touch .env
           echo HELLO_WORLD=${{ vars.HELLO_WORLD }} > .env
+          echo HELLO_WORLD1=${{ vars.HELLO_WORLD }} >> .env
           cat .env
   #     - name: npm install, build, and test
   #       run: |
