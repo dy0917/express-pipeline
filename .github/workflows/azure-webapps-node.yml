@@ -32,6 +32,8 @@ permissions:
 
 jobs:
   build:
+    env:
+      HELLO_WORLD: 'Kingsleyenv'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
