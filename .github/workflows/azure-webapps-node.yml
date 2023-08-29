@@ -33,7 +33,7 @@ permissions:
 jobs:
   build:
     env:
-      HELLO_WORLD: 'Kingsleyenv'
+      HELLO_WORLD: ${{vars.HELLO_WORLD}}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3

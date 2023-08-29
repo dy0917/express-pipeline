@@ -38,4 +38,4 @@ jobs:
       HELLO_WORLD: ${{vars.HELLO_WORLD}}
     steps:
       - name: reada variable
-        run: echo "env  $HELLO_WORLD"
+        run: echo "env  $HELLO_WORLD ${{vars.HELLO_WORLD}}"
