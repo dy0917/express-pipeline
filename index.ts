@@ -8,7 +8,9 @@ const app: Application = express();
 const port = process.env.PORT || 8000;
 
 app.get('/', (req: Request, res: Response) => {
-  res.send(`Welcome to Express & TypeScript Server ${process.env.HELLO_WORLD}`);
+  res.send(
+    `Welcome to Express & TypeScript Server ${process.env.HELLO_WORLD}  ${process.env.API_SECRET}`
+  );
 });
 
 app.listen(port, () => {

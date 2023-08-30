@@ -47,6 +47,7 @@ jobs:
         run: |
           touch .env
           echo HELLO_WORLD=${{ vars.HELLO_WORLD }} >> .env
+          echo API_SECRET=${{secrets.API_SECRET}} >> .env
           cat .env
       - name: npm install, build, and test
         run: |

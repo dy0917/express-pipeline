@@ -36,6 +36,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       HELLO_WORLD: ${{vars.HELLO_WORLD}}
+      API_SECRET: ${{secrets.API_SECRET}}
     steps:
       - name: reada variable
         run: echo "env  $HELLO_WORLD ${{vars.HELLO_WORLD}}"
